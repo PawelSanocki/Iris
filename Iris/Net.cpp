@@ -153,7 +153,7 @@ void Net::improve(float* results, int label)
 		for (unsigned int j = 0; j < net[i].layer.size(); j++)
 		{
 			net[i].layer[j].correct_weights();
-			net[i].layer[j].correct_bias();
+			//net[i].layer[j].correct_bias();
 			net[i].layer[j].error = 0;
 		}
 	}
@@ -164,7 +164,8 @@ float Net::test()
 {
 	float sepal_l,sepal_w,petal_l,petal_w ;
 	cout << "Give sepal length, sepal width, petal length and petal width: " << endl; 
-	cin >> sepal_l >> sepal_w >> petal_l >> petal_w;
+	//cin >> sepal_l >> sepal_w >> petal_l >> petal_w;
+	sepal_l = 5.1; sepal_w = 3.5; petal_l = 1.4; petal_w = 0.2;
 	float results[LAST_LAYER];
 	net[0].layer[0].setValue(sepal_l);
 	net[0].layer[1].setValue(sepal_w);

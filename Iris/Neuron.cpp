@@ -72,5 +72,5 @@ void Neuron::correct_bias()
 float Neuron::derivative()
 {
 	double help = pow(M_E, -this->e);
-	return (help / (pow(2, (1 + help))));
+	return (help / (pow((1 + help), 2)));
 }

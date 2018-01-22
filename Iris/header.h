@@ -15,7 +15,7 @@
 #include <string>
 #include <algorithm>
 
-#define LEARNING_FACTOR 0.2																			// how fast should the net learn (how big impact on the weights and biases should have one sample)
+#define LEARNING_FACTOR 0.4																			// how fast should the net learn (how big impact on the weights and biases should have one sample)
 #define M_E 2.71828182845904523536																	// needed for sigmoid function
 #define N_HIDDEN 2																					// amount of hidden layers
 #define NUMBER_OF_SAMPLES 150																		// needed to easily set number of samples for testing the program
@@ -26,7 +26,7 @@
 using namespace std;
 
 int biggest(float* tab);																			// returns index of the biggest number in the table of ten elements, needed to bing the final answer
-void mix();
+void mix();																							// changes the order of the samples in the file
 
 
 #endif // HEADER_H_INCLUDED

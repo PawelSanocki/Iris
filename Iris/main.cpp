@@ -22,7 +22,7 @@ int main()
 	}
 	// the end of loading weights
 	do {
-		cout << "Learn - 0 \nTest - 1 \nLearn 30k times - 4 \n" << endl;
+		cout << "Learn - 0 \nTest - 1 \nLearn 100 times - 4 \n" << endl;
 		cin >> n;
 		cout << endl;
 		try
@@ -39,10 +39,10 @@ int main()
 			}break;
 			case 4:
 			{
-				for (int it = 0; it < 30000; it++)
+				for (int it = 0; it < 100; it++)
 				{
 					myNet.learn();
-					if (it%1000==0) cout << it << " ";
+					if (it%10==0) cout << it << " ";
 				}
 			}break;
 			}
